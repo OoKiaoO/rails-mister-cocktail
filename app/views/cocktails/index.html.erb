@@ -1,13 +1,16 @@
-<div class="jumbotron jumbotron-luid">
+<div id="banner" class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">All cocktails</h1>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
       <% @cocktails.each do |cocktail| %>
-        <div class="col-lg-3"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+        <% if cocktail.photo.attached? %>
+          <div id="card" class="col-lg-3" style="background-image: url(<%= cl_image_path cocktail.photo.key %>); background-size: cover; background-position: bottom;">
+            <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+          </div>
+        <% end %>
       <% end %>
   </div>
 </div>

@@ -1,0 +1,21 @@
+#card {
+  height: 200px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  p {
+    font-family: 'Lobster', cursive;
+    font-size: 45px;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+  }
+  p:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  background-color: rgba(14, 13, 13, 0);  
+}
