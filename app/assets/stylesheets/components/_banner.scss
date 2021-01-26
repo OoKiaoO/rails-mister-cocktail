@@ -3,14 +3,36 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 900px;
+  height: 800px;
   text-align: center;
   .container {
     margin-top: 200px;
   }
+  margin-bottom: 0px;
 }
 
 #banner-typed-text {
   font-size: 35px;
   color: white;
+}
+
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 260px;
+}
+
+.button {
+  font-family: 'Syne Mono', monospace;
+  color: #FAFAFA;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  margin-top: 30px;
+  padding: 8px;
+  &:hover {
+    color: $red;
+    border: 1px solid $red;
+    border-radius: 5px;
+  }
 }

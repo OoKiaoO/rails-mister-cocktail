@@ -1,16 +1,23 @@
 <div id="banner" class="jumbotron jumbotron-fluid">
+
   <div class="container">
-    <p>
+    <p class="moving-text">
       <span id="banner-typed-text"></span>
     </p>
+    <div class="form-container">
+      <form class="form my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="button" type="submit">Search</button>
+      </form>
+    </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
+<div id="main" class="container my-5">
+  <div class="row justify-content-around">
       <% @cocktails.each do |cocktail| %>
         <% if cocktail.photo.attached? %>
-          <div id="card" class="col-lg-3" style="background-image: url(<%= cl_image_path cocktail.photo.key %>); background-size: cover; background-position: bottom;">
+          <div id="card" class="col-lg-3 m-3" style="background-image: url(<%= cl_image_path cocktail.photo.key %>); background-size: cover; background-position: bottom;">
             <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
           </div>
         <% end %>
