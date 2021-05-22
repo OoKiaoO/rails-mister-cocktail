@@ -1,8 +1,8 @@
-<div id="new" class="container p-3 my-3">
-  <h1>Create a new Cocktail</h1>
+<div id="new" class="container">
+  <h1 id="new-title">Create a new Cocktail</h1>
   <%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :name, placeholder: "What's the name of your cocktail?" %>
+  <%= f.input :photo, as: :file, label: "Choose a nice picture to upload!" %>
   <%= f.button :submit, class: "btn btn-primary" %>
   <%= f.button :button, "Cancel", type: "reset", class: "btn-danger" %>
   <% end %>

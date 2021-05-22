@@ -19,9 +19,9 @@
   </div>
 
   <div class="dose-form p-3 my-3">
-    <h1>Add a new ingredient:</h1>
+    <h1 id="form-title">Add a new ingredient:</h1>
     <%= simple_form_for [ @cocktail, @dose ] do |f| %>
-      <%= f.input :description %>
+      <%= f.input :description, placeholder: "Specify the quantity here" %>
       <%= f.association :ingredient %>
       <%= f.button :submit, class: "btn btn-primary" %>
       <%= f.button :button, "Cancel", type: "reset", class: "btn-danger" %>

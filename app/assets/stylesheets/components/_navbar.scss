@@ -9,14 +9,14 @@
 }
 
 .navbar-lewagon-white {
-  background-color: white;
+  background-color: $gray;
 }
 
 p {
   font-family: 'Syne Mono', monospace;
   color: #FAFAFA;
   font-size: 30px;
-  margin: 16px;
+  margin: 10px;
 
   &:hover {
     color: $red;
